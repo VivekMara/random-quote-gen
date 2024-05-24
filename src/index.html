@@ -6,8 +6,18 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <div class="flex justify-center items-center">
+    <h1 class="font-bold text-xl">Quote Gen</h1>
+    <div class="flex">
+      <h2>Author: </h2>
+      <h2 id="author"></h2>
+    </div>
+    <div>
+      <p>Quote:</p>
+      <p id="content"></p>
+    </div>
+    <button id="btn" onclick="fetchQuote()">Generate Quote</button>
+  </div>
+  <script src="index.js"></script>
 </body>
 </html>
