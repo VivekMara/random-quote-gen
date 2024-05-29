@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: Source Code Pro;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#heading{
+    font-weight: 900;
+}
+.author-container{
+    display: flex;
+    gap: 50px;
+}
+.quote-container{
+    display: flex;
+    gap: 20px;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
