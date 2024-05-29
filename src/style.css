@@ -29,7 +29,9 @@ body{
     justify-content: center;
     gap: 50px;
     font-weight: 900;
+    padding: 10px;
 }
+
 
 #btn{
     border-radius: 10px;
