@@ -7,7 +7,7 @@ function App() {
 
   async function requestQuotes(num){
     try {
-      const response = await axios.get("http://localhost:3000/");
+      const response = await axios.get("https://quotegendarthman.azurewebsites.net/quote");
       const data = response.data;
       const quote = data[num]
       setAuthor(quote.author)
