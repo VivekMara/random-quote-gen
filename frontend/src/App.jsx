@@ -3,7 +3,7 @@ import { useState } from "react";
 function App() {
   const [quote,setQuote] = useState(null);
   const [author,setAuthor] = useState(null);
-
+  const [loader, setLoader] = useState(false)
 
   async function requestQuotes(num){
     try {
@@ -14,6 +14,8 @@ function App() {
       setQuote(quote.quote)
     } catch (error) {
       console.error(error)
+    } finally{
+      setLoader(false)
     }
   }
   
@@ -31,7 +33,7 @@ function App() {
       <h1>Welcome to the Random Quote Generator</h1>
       <h1>quote: {quote}</h1>
       <h1>author: {author}</h1>
-      <button onClick={() => randomQuote()}>get quote</button>
+      <button onClick={() => randomQuote() && setLoader(!loader)}>{loader ? "Getting quotes..." : "Get quotes"}</button>
     </>
   )
 }
